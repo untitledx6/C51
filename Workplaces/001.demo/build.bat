@@ -16,7 +16,7 @@ del 编译过程中产生的错误或警告.TXT
 
 CLS
 @echo [正在编译...]
-for %%f in (.\*.c) do @echo "%%f" LARGE  WARNINGLEVEL (0) NOINTVECTOR NOPRINT>"%ProjectName%".__i && "%BinPath%C51.exe" @%ProjectName%.__i>>编译过程中产生的错误或警告.TXT
+for %%f in (.\*.c) do @echo "%%f" LARGE  WARNINGLEVEL (0)  NOPRINT>"%ProjectName%".__i && "%BinPath%C51.exe" @%ProjectName%.__i>>编译过程中产生的错误或警告.TXT
 for %%f in (.\*.asm) do "%BinPath%A51.exe" "%%f">>编译过程中产生的错误或警告.TXT
 if not exist *.obj goto End
 @echo [正在连接...]
